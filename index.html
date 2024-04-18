@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    section{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #232323;
+      overflow: hidden;
+      box-sizing: border-box;
+      padding: 100px 20px;
+    }
+   
+    .container{
+      position: relative;
+      display: flex;
+      z-index: 10;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .container .card{
+      position: relative;
+      width: 300px;
+      height: 400px;
+      margin: 20px 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.5);
+      box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(95px);
+
+    }
+    .container .card .imgbox{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      transition: 0.5s ease-in-out;
+
+     
+    }
+    .container .card:hover .imgbox{
+      transform: translateY(-100px);
+    }
+    .container .card:hover .imgbox img{
+      transform: translate(-20px, -40px) rotate(-25deg) scale(1.4);
+
+    }
+    .container .card .imgbox img{
+      max-width: 100%;
+      margin: 0 0 20px;
+      transition: 0.5s ease-in-out;
+    }
+    .container .card .imgbox h2{
+      color: #fff;
+      font-weight: 600;
+    }
+    .container .card .content{
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: 0.5s ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+    }
+    .container .card:hover .content{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-40px);
+    }
+    .container .card .content .size,
+     .container .card .content .color{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 10px;
+    }
+    .container .card .content .size h3, 
+    .container .card .content .color h3{
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    .container .card .size span{
+      width: 26px;
+      height: 26px;
+      line-height: 24px;
+      text-align: center;
+      display: inline-block;
+      color: #111;
+      background: #fff;
+      border-radius: 4px;
+      font-size: 14px;
+      margin: 0 5px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+    .container .card .size span:hover{
+      background: #9bdc28;
+    }
+    .container .card .color span{
+      width: 20px;
+      height: 20px;
+      background: #f00;
+      border-radius: 50%;
+      margin: 0 5px;
+      border: 2px solid #fff;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+    .container .card .color span:nth-child(2){
+      background: #9bdc28;
+    }
+    .container .card .color span:nth-child(3){
+      background: #03a9f4;
+    }
+    .container .card .color span:nth-child(4){
+      background: #e91e63;
+    }
+    .container .card .content button{
+      position: relative;
+      display: inline-block;
+      top: 10px;
+      padding: 12px 30px;
+      border-radius: 40px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #111;
+      border: none;
+      text-transform: uppercase;
+    }
+  </style>
+  <title>card</title>
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="card">
+        <div class="imgbox">
+          <img src="./img/dff-removebg-preview.png" alt="">
+          <h2>Nike shoes</h2>
+          
+        </div>
+        <div class="content">
+          <div class="size">
+            <h3> Size: </h3>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+          </div>
+          <div class="color">
+            <h3>Color: </h3>
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+          <button>Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
