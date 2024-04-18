@@ -57,7 +57,18 @@
     }
     .container .card:hover .imgbox img{
       transform: translate(-20px, -40px) rotate(-25deg) scale(1.4);
+      animation: ani 5s linear forwards;
+      /* animation-duration: 5s; */
+    }
+    @keyframes ani{
+      0%{
+        transform: rotate(0deg);
+      }
+      25%{
+        transform: rotate(-25deg);
 
+      }
+      
     }
     .container .card .imgbox img{
       max-width: 100%;
